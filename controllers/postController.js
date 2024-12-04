@@ -41,9 +41,10 @@ const destroy = (req, res) => {
     const postIndex = posts.findIndex(p => p.id === postId);
     if (postIndex !== -1){
         posts.splice(postIndex, 1);
-    res.send(`Cancellazione del post ${postId}`); 
+        console.log("Lista aggiornata dei post",posts);
+        res.sendStatus(204);
     } else { 
-        res.status(404).send('Post non trovato'); 
+        res.sendStatus(404);
     } 
 };
 
