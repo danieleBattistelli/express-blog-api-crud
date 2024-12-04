@@ -2,9 +2,16 @@ const posts = require("../data/posts");
 
 //index
 const index = (req,res)=>{
+    const tag = req.query.tag;
+    let filterPosts = posts;
+
+    if(tag){
+        filterPosts = posts.filter(post=>post.tags.includes(tag));
+    }
+
     res.json({
-        data : posts,
-        count : posts.length
+        data : filterPosts,
+        count : filterPosts.length
     });
 };
 
@@ -14,7 +21,7 @@ const show = (req,res)=>{
     if(post){
         res.json(post);
     }else{
-        res.status(404).send('post non trovato');
+        res.sendStatus(404);
     }
 };
 

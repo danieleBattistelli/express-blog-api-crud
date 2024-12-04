@@ -2,7 +2,7 @@ const express = require("express");
 const router = express.Router();
 const postController = require("../controllers/postController");
 
-//index
+//index NB per la ricerca  ad esempio del tag1 sara' /posts?tag=tag1.
 router.get('/', postController.index);
 
 //show
