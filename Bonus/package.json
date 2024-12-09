@@ -1,0 +1,15 @@
+{
+  "name": "bonus",
+  "version": "1.0.0",
+  "description": "// ESERCIZIO 1\r // Scrivi una funzione filterByLength che accetta un array di stringhe e un numero minimo di caratteri. Restituisci un nuovo array contenente solo le stringhe con una lunghezza maggiore o uguale al numero dato.\r // \r // Esempio di invocazione della funzione: \r const words = [\"apple\", \"cat\", \"banana\", \"dog\"]\r filterByLength(words, 4);",
+  "main": "bonus.js",
+  "scripts": {
+    "start": "node bonus.js",
+    "dev": "node --watch bonus.js"
+  },
+  "author": "Dany",
+  "license": "ISC",
+  "dependencies": {
+    "bonus": "file:"
+  }
+}
